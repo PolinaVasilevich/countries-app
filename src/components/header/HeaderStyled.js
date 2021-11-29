@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderEl = styled.header`
@@ -12,7 +13,10 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.h1`
+export const Title = styled(Link).attrs({
+  to: "/",
+})`
+  text-decoration: none;
   color: var(--colors-text);
   font-size: var(--fs-sm);
   font-weight: var(--fw-bold);
